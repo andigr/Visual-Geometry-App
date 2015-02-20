@@ -1,0 +1,29 @@
+.geometry-container #canvas {
+	border: 1px solid black;
+	background:url('../images/paper.png');
+}
+.geometry-container .g-button {
+	border: 1px solid black;
+	float: left;
+	margin: 10px;
+	min-width: 120px;
+	cursor: pointer;
+	padding: 2px;
+}
+.geometry-container .g-button.active {
+	background-color: #bbb;
+	
+}
+.geometry-container .hide {
+	display: none;
+}
+.geometry-container .show {
+	display: block;
+}
+.geometry-container table .show {
+	display: table;
+}
+.geometry-container input[readonly=readonly] {
+	background-color: #eee;
+	padding-left: 2px;
+}

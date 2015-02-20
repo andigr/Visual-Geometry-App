@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="geometry-container">
+	<div style="float:left">
+		<canvas id="canvas" width="700px" height="500px"></canvas>
+		<div style="clear:both"></div>
+		<div class="g-button active" id="g-rectangle" data-figure="rectangle">Rectangle</div>
+		<div class="g-button" id="g-triangle" data-figure="triangle">Triangle</div>
+		<div class="g-button" id="g-rhombus" data-figure="rhombus">Rhombus</div>
+		<div class="g-button" id="g-circle" data-figure="circle">Circle</div>
+	</div>
+	<div style="float:left">
+	<div id="rectangle-container">
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">Rectangle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Coordinates:</td> 
+					<td>
+						X: <input type="text" name="rectangle-x" id="rectangle-x" value="" readonly="readonly" />
+						Y: <input type="text" name="rectangle-y" id="rectangle-y" value="" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Width:</td>
+					<td><input type="text" name="rectangle-width" id="rectangle-width" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Height:</td>
+					<td><input type="text" name="rectangle-height" id="rectangle-height" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Diagonal:</td>
+					<td><input type="text" name="rectangle-diagonal" id="rectangle-diagonal" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Perimeter:</td>
+					<td><input type="text" name="rectangle-perimeter" id="rectangle-perimeter" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Area:</td>
+					<td><input type="text" name="rectangle-area" id="rectangle-area" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td><label for="rectangle-fill">Fill: </label></td>
+					<td><input type="checkbox" name="rectangle-fill" id="rectangle-fill" data-figure="rectangle"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="triangle-container" class="hide">
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">Triangle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Coordinates:</td> 
+					<td>
+						X: <input type="text" name="triangle-x" id="triangle-x" value="" readonly="readonly" />
+						Y: <input type="text" name="triangle-y" id="triangle-y" value="" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Cathetus Horizontal:</td>
+					<td><input type="text" name="triangle-cathetusHorizontal" id="triangle-cathetusHorizontal" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Cathetus Vertical:</td>
+					<td><input type="text" name="triangle-cathetusVertical" id="triangle-cathetusVertical" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Angles (degrees):</td> 
+					<td>
+						A: <input type="text" name="triangle-angleA" id="triangle-angleA" value="" readonly="readonly" />
+						B: <input type="text" name="triangle-angleB" id="triangle-angleB" value="" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Angles (radias):</td> 
+					<td>
+						A: <input type="text" name="triangle-angleARad" id="triangle-angleARad" value="" readonly="readonly" />
+						B: <input type="text" name="triangle-angleBRad" id="triangle-angleBRad" value="" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Hypotenuse:</td>
+					<td><input type="text" name="triangle-hypotenuse" id="triangle-hypotenuse" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Perimeter:</td>
+					<td><input type="text" name="triangle-perimeter" id="triangle-perimeter" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Area:</td>
+					<td><input type="text" name="triangle-area" id="triangle-area" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td><label for="triangle-fill">Fill: </label></td>
+					<td><input type="checkbox" name="triangle-fill" id="triangle-fill"data-figure="triangle"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="circle-container" class="hide">
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">Circle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Coordinates:</td> 
+					<td>
+						X: <input type="text" name="circle-x" id="circle-x" value="" readonly="readonly" />
+						Y: <input type="text" name="circle-y" id="circle-y" value="" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Radius:</td>
+					<td><input type="text" name="circle-radius" id="circle-radius" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Circumference:</td>
+					<td><input type="text" name="circle-circumference" id="circle-circumference" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Area:</td>
+					<td><input type="text" name="circle-area" id="circle-area" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td><label for="circle-fill">Fill: </label></td>
+					<td><input type="checkbox" name="circle-fill" id="circle-fill" data-figure="circle"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="rhombus-container" class="hide">
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">Rhombus: </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Coordinates:</td> 
+					<td>
+						X: <input type="text" name="rhombus-x" id="rhombus-x" value="" readonly="readonly" />
+						Y: <input type="text" name="rhombus-y" id="rhombus-y" value="" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Side:</td>
+					<td><input type="text" name="rhombus-side" id="rhombus-side" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Diagonal Horizontal:</td>
+					<td><input type="text" name="rhombus-diagonalHorizontal" id="rhombus-diagonalHorizontal" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Diagonal Vertical:</td>
+					<td><input type="text" name="rhombus-diagonalVertical" id="rhombus-diagonalVertical" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Perimeter:</td>
+					<td><input type="text" name="rhombus-perimeter" id="rhombus-perimeter" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Area:</td>
+					<td><input type="text" name="rhombus-area" id="rhombus-area" value="" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td><label for="rhombus-fill">Fill: </label></td>
+					<td><input type="checkbox" name="rhombus-fill" id="rhombus-fill" data-figure="rhombus"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</div>
+</div>
+</body>
+<script src="js/SimpleGeometryEngine.js"></script>
+<script src="js/Figure.js"></script>
+<script src="js/Rectangle.js"></script>
+<script src="js/Triangle.js"></script>
+<script src="js/Circle.js"></script>
+<script src="js/Rhombus.js"></script>
+<script src="js/FiguresFactory.js"></script>
+<script src="js/example.js"></script>
+</html>
